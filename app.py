@@ -110,7 +110,7 @@ if uploaded_file is not None:
     
     with col1:
         st.header("Original Image")
-        st.image(original_img, caption="Original Satellite Image", use_column_width=True)
+        st.image(original_img, caption="Original Satellite Image", use_container_width=True)
         
     # Add a button to trigger the segmentation process
     if st.button("Segment Buildings"):
@@ -133,8 +133,6 @@ if uploaded_file is not None:
                     # Display the segmented image in the second column
                     with col2:
                         st.header("Segmented Buildings")
-                        st.image(overlay_img, caption="Buildings Highlighted", use_column_width=True)
+                        st.image(overlay_img, caption="Buildings Highlighted", use_container_width=True)
         else:
             st.warning("Model is not loaded. Please check the `inria_unet.h5` file.")
-
-
